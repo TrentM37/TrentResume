@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tractor Swather</title>
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="game-header">
+    <nav>
+      <a href="index.html" class="nav-btn">Resume Page</a>
+      <a href="hobbies.html" class="nav-btn">Hobbies Page</a>
+    </nav>
+  </header>
+
+  <!-- Damage Overlay -->
+  <div id="damage-overlay" class="damage-flash"></div>
+
+  <!-- HUD Overlay -->
+  <div class="hud">
+    <div class="score-container">
+      Hay Cut: <span id="score">0</span>
+      <br><br>
+      High Score: <span id="high-score">0</span>
+      <br><br>
+      Percent Cut: <span id="percent-cut">0.0</span>%
+    </div>
+    <div class="lives-container" id="lives">
+      <!-- Hearts populated by JS -->
+    </div>
+  </div>
+
+  <!-- Main Game Canvas -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Tractor Stuck Modal -->
+  <div id="stuck-modal" class="overlay hidden">
+    <h2 style="color: #3498db; text-shadow: 6px 6px 0px #2980b9;">Tractor Stuck!</h2>
+    <p>Do you want to call for help? (Lose one life)</p>
+    <button id="get-help-btn" class="nav-btn">Get Help</button>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div id="game-over" class="overlay hidden">
+    <h2 id="game-over-title">Game Over</h2>
+    <p>You swathed <span id="final-score">0</span> square feet of hay!</p>
+    <canvas id="pie-chart" width="100" height="100" style="margin-bottom: 25px; border: 4px solid white; box-shadow: 4px 4px 0px rgba(0,0,0,0.5);"></canvas>
+    <button id="restart-btn" class="nav-btn">Restart</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
